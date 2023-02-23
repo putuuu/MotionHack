@@ -32,7 +32,7 @@ class Otp : Fragment() {
         }
 
         binding.buttonSubmitOtp.setOnClickListener{
-
+            findNavController().navigate(R.id.action_otp_to_changePass)
         }
 
         return view

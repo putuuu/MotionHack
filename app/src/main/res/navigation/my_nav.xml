@@ -85,5 +85,30 @@
         <action
             android:id="@+id/action_otp_to_inputEmail"
             app:destination="@id/inputEmail" />
+        <action
+            android:id="@+id/action_otp_to_changePass"
+            app:destination="@id/changePass"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePass"
+        android:name="com.example.hackmotion.splash.changepass.ChangePass"
+        android:label="fragment_change_pass"
+        tools:layout="@layout/fragment_change_pass" >
+        <action
+            android:id="@+id/action_changePass_to_passChange"
+            app:destination="@id/passChange"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/passChange"
+        android:name="com.example.hackmotion.splash.changepass.PassChange"
+        android:label="fragment_pass_change"
+        tools:layout="@layout/fragment_pass_change" >
+        <action
+            android:id="@+id/action_passChange_to_login"
+            app:destination="@id/login" />
     </fragment>
 </navigation>

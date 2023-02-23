@@ -126,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/quicksandmedium"
-        android:text="submit"
+        android:text="Submit"
         android:textColor="@color/white5"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonSubmitOtp"
