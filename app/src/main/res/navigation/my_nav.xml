@@ -88,7 +88,7 @@
         <action
             android:id="@+id/action_otp_to_changePass"
             app:destination="@id/changePass"
-            app:popUpTo="@id/login"
+            app:popUpTo="@id/otp"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -99,7 +99,7 @@
         <action
             android:id="@+id/action_changePass_to_passChange"
             app:destination="@id/passChange"
-            app:popUpTo="@id/login"
+            app:popUpTo="@id/changePass"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

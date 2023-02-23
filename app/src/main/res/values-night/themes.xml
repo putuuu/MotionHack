@@ -15,4 +15,6 @@
 
         <item name="pinViewStyle">@style/PinWidget.PinView</item>
     </style>
+
+
 </resources>
