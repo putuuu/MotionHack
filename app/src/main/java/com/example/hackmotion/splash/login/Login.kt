@@ -31,6 +31,10 @@ class Login : Fragment() {
             findNavController().navigate(R.id.action_login_to_home)
         }
 
+        binding.textViewForgetPass.setOnClickListener{
+            findNavController().navigate(R.id.action_login_to_inputEmail)
+        }
+
         return view
     }
 

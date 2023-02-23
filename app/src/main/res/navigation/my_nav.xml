@@ -38,8 +38,12 @@
         <action
             android:id="@+id/action_login_to_home"
             app:destination="@id/home"
+            app:launchSingleTop="true"
             app:popUpTo="@id/login"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_inputEmail"
+            app:destination="@id/inputEmail" />
     </fragment>
     <fragment
         android:id="@+id/signup"
@@ -49,6 +53,7 @@
         <action
             android:id="@+id/action_signup_to_home"
             app:destination="@id/home"
+            app:launchSingleTop="true"
             app:popUpTo="@id/signup"
             app:popUpToInclusive="true" />
         <action
@@ -60,4 +65,25 @@
         android:name="com.example.hackmotion.splash.home.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/inputEmail"
+        android:name="com.example.hackmotion.splash.changepass.InputEmail"
+        android:label="fragment_input_email"
+        tools:layout="@layout/fragment_input_email" >
+        <action
+            android:id="@+id/action_inputEmail_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_inputEmail_to_otp"
+            app:destination="@id/otp" />
+    </fragment>
+    <fragment
+        android:id="@+id/otp"
+        android:name="com.example.hackmotion.splash.changepass.Otp"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_otp_to_inputEmail"
+            app:destination="@id/inputEmail" />
+    </fragment>
 </navigation>
