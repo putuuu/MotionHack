@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/Home"
+        android:id="@+id/dashboard"
         android:enabled="true"
         android:icon="@drawable/home"
         android:title="Home"/>
     <item
-        android:id="@+id/Discovery"
+        android:id="@+id/discovery"
         android:enabled="true"
         android:icon="@drawable/search"
         android:title="Discovery"/>
     <item
-        android:id="@+id/Transaction"
+        android:id="@+id/transaction"
         android:enabled="true"
         android:icon="@drawable/transaction"
         android:title="My Transaction"/>
     <item
-        android:id="@+id/Notification"
+        android:id="@+id/notification"
         android:enabled="true"
         android:icon="@drawable/notification"
         android:title="Notification"/>
     <item
-        android:id="@+id/Profile"
+        android:id="@+id/profile"
         android:enabled="true"
         android:icon="@drawable/profile"
         android:title="Profile"/>

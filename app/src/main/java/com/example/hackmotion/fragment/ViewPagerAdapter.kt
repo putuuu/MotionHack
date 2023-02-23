@@ -1,4 +1,4 @@
-package com.example.hackmotion.splash
+package com.example.hackmotion.fragment
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

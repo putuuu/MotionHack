@@ -1,4 +1,4 @@
-package com.example.hackmotion.splash.changepass
+package com.example.hackmotion.fragment.changepass
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hackmotion.R
 import com.example.hackmotion.databinding.FragmentInputEmailBinding
-import com.example.hackmotion.databinding.FragmentLoginBinding
 
 class InputEmail : Fragment() {
 

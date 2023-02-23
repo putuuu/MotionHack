@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splash"
-        android:name="com.example.hackmotion.splash.Splash"
+        android:name="com.example.hackmotion.fragment.Splash"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.hackmotion.splash.ViewPagerFragment"
+        android:name="com.example.hackmotion.fragment.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
         <action
@@ -29,45 +29,38 @@
     </fragment>
     <fragment
         android:id="@+id/login"
-        android:name="com.example.hackmotion.splash.login.Login"
+        android:name="com.example.hackmotion.fragment.login.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_login_to_signup"
             app:destination="@id/signup" />
         <action
-            android:id="@+id/action_login_to_home"
-            app:destination="@id/home"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/login"
-            app:popUpToInclusive="true" />
-        <action
             android:id="@+id/action_login_to_inputEmail"
             app:destination="@id/inputEmail" />
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/signup"
-        android:name="com.example.hackmotion.splash.signup.Signup"
+        android:name="com.example.hackmotion.fragment.signup.Signup"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" >
         <action
-            android:id="@+id/action_signup_to_home"
-            app:destination="@id/home"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/signup"
-            app:popUpToInclusive="true" />
-        <action
             android:id="@+id/action_signup_to_login"
             app:destination="@id/login" />
+        <action
+            android:id="@+id/action_signup_to_menu"
+            app:destination="@id/menu"
+            app:popUpTo="@id/signup"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/home"
-        android:name="com.example.hackmotion.splash.home.Home"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
         android:id="@+id/inputEmail"
-        android:name="com.example.hackmotion.splash.changepass.InputEmail"
+        android:name="com.example.hackmotion.fragment.changepass.InputEmail"
         android:label="fragment_input_email"
         tools:layout="@layout/fragment_input_email" >
         <action
@@ -79,7 +72,7 @@
     </fragment>
     <fragment
         android:id="@+id/otp"
-        android:name="com.example.hackmotion.splash.changepass.Otp"
+        android:name="com.example.hackmotion.fragment.changepass.Otp"
         android:label="fragment_otp"
         tools:layout="@layout/fragment_otp" >
         <action
@@ -93,7 +86,7 @@
     </fragment>
     <fragment
         android:id="@+id/changePass"
-        android:name="com.example.hackmotion.splash.changepass.ChangePass"
+        android:name="com.example.hackmotion.fragment.changepass.ChangePass"
         android:label="fragment_change_pass"
         tools:layout="@layout/fragment_change_pass" >
         <action
@@ -104,11 +97,16 @@
     </fragment>
     <fragment
         android:id="@+id/passChange"
-        android:name="com.example.hackmotion.splash.changepass.PassChange"
+        android:name="com.example.hackmotion.fragment.changepass.PassChange"
         android:label="fragment_pass_change"
         tools:layout="@layout/fragment_pass_change" >
         <action
             android:id="@+id/action_passChange_to_login"
             app:destination="@id/login" />
     </fragment>
+    <activity
+        android:id="@+id/menu"
+        android:name="com.example.hackmotion.Menu"
+        android:label="activity_menu"
+        tools:layout="@layout/activity_menu" />
 </navigation>

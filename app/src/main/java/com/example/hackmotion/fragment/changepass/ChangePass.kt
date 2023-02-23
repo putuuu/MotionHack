@@ -1,4 +1,4 @@
-package com.example.hackmotion.splash.changepass
+package com.example.hackmotion.fragment.changepass
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,22 +8,22 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hackmotion.R
 import com.example.hackmotion.databinding.FragmentChangePassBinding
-import com.example.hackmotion.databinding.FragmentPassChangeBinding
 
-class PassChange : Fragment() {
+class ChangePass : Fragment() {
 
-    private var _binding: FragmentPassChangeBinding? = null
+    private var _binding: FragmentChangePassBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentPassChangeBinding.inflate(inflater, container, false)
+
+        _binding = FragmentChangePassBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.buttonNewPass2.setOnClickListener {
-            findNavController().navigate(R.id.action_passChange_to_login)
+        binding.buttonNewPass.setOnClickListener {
+            findNavController().navigate(R.id.action_changePass_to_passChange)
         }
 
         return view

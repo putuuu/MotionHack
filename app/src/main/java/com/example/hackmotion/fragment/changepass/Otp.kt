@@ -1,4 +1,4 @@
-package com.example.hackmotion.splash.changepass
+package com.example.hackmotion.fragment.changepass
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hackmotion.R
-import com.example.hackmotion.databinding.FragmentChangePassBinding
 import com.example.hackmotion.databinding.FragmentOtpBinding
 
-class ChangePass : Fragment() {
+class Otp : Fragment() {
 
-    private var _binding: FragmentChangePassBinding? = null
+    private var _binding: FragmentOtpBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,11 +19,19 @@ class ChangePass : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
 
-        _binding = FragmentChangePassBinding.inflate(inflater, container, false)
+        _binding = FragmentOtpBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.buttonNewPass.setOnClickListener {
-            findNavController().navigate(R.id.action_changePass_to_passChange)
+        binding.linearLayoutBack.setOnClickListener{
+            findNavController().navigate(R.id.action_otp_to_inputEmail)
+        }
+
+        binding.textViewResendOtp.setOnClickListener {
+
+        }
+
+        binding.buttonSubmitOtp.setOnClickListener{
+            findNavController().navigate(R.id.action_otp_to_changePass)
         }
 
         return view

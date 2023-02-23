@@ -1,4 +1,4 @@
-package com.example.hackmotion.splash.login
+package com.example.hackmotion.fragment.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hackmotion.R
 import com.example.hackmotion.databinding.FragmentLoginBinding
-import com.example.hackmotion.databinding.FragmentScreen1Binding
 
 class Login : Fragment() {
 
@@ -28,7 +27,7 @@ class Login : Fragment() {
         }
 
         binding.buttonLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_login_to_home)
+            findNavController().navigate(R.id.action_login_to_menu)
         }
 
         binding.textViewForgetPass.setOnClickListener{

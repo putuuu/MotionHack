@@ -1,4 +1,4 @@
-package com.example.hackmotion.splash.screens
+package com.example.hackmotion.fragment.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.hackmotion.R
-import com.example.hackmotion.databinding.FragmentScreen1Binding
 import com.example.hackmotion.databinding.FragmentScreen2Binding
 
 class Screen2 : Fragment() {
