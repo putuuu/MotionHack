@@ -11,13 +11,13 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/creologo"
-        android:label="Creo"
+        android:label="@string/app_name"
         android:roundIcon="@drawable/creologo"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackMotion"
         tools:targetApi="31">
         <activity
-            android:name=".VideoCall"
+            android:name=".fragment.home.transaction.VideoCall"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -24,7 +24,7 @@ class TransactionMenu : Fragment() {
         val view = binding.root
 
         binding.button.setOnClickListener {
-            findNavController().navigate(R.id.action_transactionMenu_to_transactionOngoing2)
+            findNavController().navigate(R.id.action_transactionMenu_to_videoCall)
         }
 
         return view

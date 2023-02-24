@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.hackmotion"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -40,6 +40,9 @@ repositories {
     google()
     mavenCentral()
     maven {url 'https://jitpack.io'}
+    maven {
+        url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+    }
 }
 
 dependencies {
@@ -72,6 +75,8 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    implementation ('org.jitsi.react:jitsi-meet-sdk:7.0.1') { transitive = true }
 
 
 }

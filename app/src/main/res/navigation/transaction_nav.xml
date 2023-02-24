@@ -5,17 +5,17 @@
     android:id="@+id/transaction_nav"
     app:startDestination="@id/transactionMenu">
     <fragment
-        android:id="@+id/transactionOngoing2"
-        android:name="com.example.hackmotion.fragment.home.transaction.TransactionOngoing"
-        android:label="fragment_transaction_ongoing"
-        tools:layout="@layout/fragment_transaction_ongoing" />
-    <fragment
         android:id="@+id/transactionMenu"
         android:name="com.example.hackmotion.fragment.home.transaction.TransactionMenu"
         android:label="fragment_transaction_menu"
         tools:layout="@layout/fragment_transaction_menu" >
         <action
-            android:id="@+id/action_transactionMenu_to_transactionOngoing2"
-            app:destination="@id/transactionOngoing2" />
+            android:id="@+id/action_transactionMenu_to_videoCall"
+            app:destination="@id/videoCall" />
     </fragment>
+    <activity
+        android:id="@+id/videoCall"
+        android:name="com.example.hackmotion.fragment.home.transaction.VideoCall"
+        android:label="activity_video_call"
+        tools:layout="@layout/activity_video_call" />
 </navigation>
