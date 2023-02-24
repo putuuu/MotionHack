@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.hackmotion.R
+import com.example.hackmotion.databinding.FragmentDiscoveryBinding
 import com.example.hackmotion.databinding.FragmentLoginBinding
 
 class Login : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
+
     private val binding get() = _binding!!
 
     override fun onCreateView(

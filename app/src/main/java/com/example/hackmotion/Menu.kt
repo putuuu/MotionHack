@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.hackmotion.databinding.ActivityMenuBinding
+import com.example.hackmotion.databinding.FragmentDashboardBinding
 import com.example.hackmotion.fragment.home.dashboard.Dashboard
 import com.example.hackmotion.fragment.home.discovery.Discovery
 import com.example.hackmotion.fragment.home.notification.Notification
@@ -53,7 +54,7 @@ class Menu : AppCompatActivity() {
         setContentView(view)
     }
 
-    private  fun loadFragment(fragment: Fragment){
+    public fun loadFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.menuFragment,fragment)
         transaction.commit()

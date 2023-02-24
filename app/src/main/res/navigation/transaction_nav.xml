@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transaction_nav"
+    app:startDestination="@id/transactionMenu">
+    <fragment
+        android:id="@+id/transactionOngoing2"
+        android:name="com.example.hackmotion.fragment.home.transaction.TransactionOngoing"
+        android:label="fragment_transaction_ongoing"
+        tools:layout="@layout/fragment_transaction_ongoing" />
+    <fragment
+        android:id="@+id/transactionMenu"
+        android:name="com.example.hackmotion.fragment.home.transaction.TransactionMenu"
+        android:label="fragment_transaction_menu"
+        tools:layout="@layout/fragment_transaction_menu" >
+        <action
+            android:id="@+id/action_transactionMenu_to_transactionOngoing2"
+            app:destination="@id/transactionOngoing2" />
+    </fragment>
+</navigation>
