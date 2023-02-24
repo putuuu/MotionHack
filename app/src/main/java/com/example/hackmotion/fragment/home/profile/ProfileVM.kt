@@ -2,7 +2,6 @@ package com.example.hackmotion.fragment.home.profile
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import retrofit2.http.Url
 
 class ProfileVM : ViewModel() {
 

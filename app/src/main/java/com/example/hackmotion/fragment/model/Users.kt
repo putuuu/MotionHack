@@ -1,8 +1,6 @@
-package com.example.hackmotion.fragment.home.profile.model
+package com.example.hackmotion.fragment.model
 
-import com.google.gson.annotations.SerializedName
-
-data class Pengguna (
+data class Users (
     val id: String,
     val name: String,
     val phone: String,

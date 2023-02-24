@@ -35,7 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/quicksandbold"
-        android:text="Umam Syarief"
         android:textColor="@color/white5"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/profile_image"
