@@ -9,5 +9,24 @@
         android:id="@+id/profileUser"
         android:name="com.example.hackmotion.fragment.home.profile.ProfileUser"
         android:label="fragment_profile_user"
-        tools:layout="@layout/fragment_profile_user" />
+        tools:layout="@layout/fragment_profile_user" >
+        <action
+            android:id="@+id/action_profileUser_to_profileChange"
+            app:destination="@id/profileChange" />
+        <argument
+            android:name="change"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileChange"
+        android:name="com.example.hackmotion.fragment.home.profile.ProfileChange"
+        android:label="fragment_profile_change"
+        tools:layout="@layout/fragment_profile_change" >
+        <argument
+            android:name="change"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_profileChange_to_profileUser"
+            app:destination="@id/profileUser" />
+    </fragment>
 </navigation>
