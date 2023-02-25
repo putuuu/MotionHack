@@ -70,7 +70,7 @@ class DiscoveryMenu : Fragment(), RecyclerViewClickListener {
             }
         }
         if (filterList.isEmpty()) {
-            Toast.makeText(context, "book not found", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Pencarian tidak ditemukan", Toast.LENGTH_SHORT).show()
         } else {
             binding.rvDiscovery.adapter = RvCallAdapterDone(filterList)
         }
