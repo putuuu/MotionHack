@@ -41,7 +41,7 @@ class Dashboard : Fragment(), RecyclerViewClickListener {
         val dataLive = Source.getStream() as ArrayList<LiveStream>
         val dataCategory = Source.getKategori() as ArrayList<Kategori>
 
-        val adapterAvailable = RvCallAdapter(dataAvailable)
+        val adapterAvailable = RvCallAdapter(getAvailable(dataAvailable))
         binding.available.layoutManager = LinearLayoutManager(context)
         binding.available.adapter = adapterAvailable
 
@@ -55,6 +55,16 @@ class Dashboard : Fragment(), RecyclerViewClickListener {
         binding.categoryR.adapter = adapterCategory
 
         return view
+    }
+
+    private fun getAvailable(data:ArrayList<Call>):ArrayList<Call>{
+        val call = ArrayList<Call>()
+        for (i in data){
+            if(i.status == "Available"){
+                call.add(i)
+            }
+        }
+        return call
     }
 
     override fun onItemCallClicked(view: View, call: Call) {}
