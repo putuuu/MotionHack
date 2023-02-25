@@ -27,6 +27,12 @@ public class Source {
                 "Rp40.000", "Private Call",
                 "https://pixabay.com/id/photos/anjing-satwa-matahari-terbenam-7535633/",
                 "Ongoing"));
+        lstCall.add(new Call("Eren Yaeger", "15 Maret 2023", "Cara Boker",
+                "Childfree adalah keputusan pasangan untuk tidak memiliki anak dalam pernikahan mereka. Tak dimungkiri ada banyak pasangan yang bahkan memutuskan pilihan ini." +
+                        "Childfree adalah keputusan pasangan untuk tidak memiliki anak dalam pernikahan mereka. Tak dimungkiri ada banyak pasangan yang bahkan memutuskan pilihan ini.",
+                "Rp40.000", "Video Call",
+                "https://pixabay.com/id/photos/anjing-satwa-matahari-terbenam-7535633/",
+                "Notification"));
 
         return lstCall;
     }
