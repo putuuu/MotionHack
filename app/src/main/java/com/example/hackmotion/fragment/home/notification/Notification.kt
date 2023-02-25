@@ -1,17 +1,14 @@
 package com.example.hackmotion.fragment.home.notification
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hackmotion.R
 import com.example.hackmotion.dataSource.Source
 import com.example.hackmotion.databinding.FragmentNotificationBinding
-import com.example.hackmotion.fragment.home.transaction.RvCallAdapterDone
-import com.example.hackmotion.fragment.model.Call
+import com.example.hackmotion.fragment.model.Notif
 
 class Notification : Fragment() {
 
@@ -34,22 +31,13 @@ class Notification : Fragment() {
     }
 
     private fun setAdapter(){
-        val data = Source.getCall() as ArrayList<Call>
+        val data = Source.getNotif() as ArrayList<Notif>
         binding.apply {
-            adapter = RvNotivicationAdapter(getNotification(data))
+            adapter = RvNotivicationAdapter(data)
             RvNotivication.layoutManager = LinearLayoutManager(context)
             RvNotivication.adapter = adapter
         }
     }
 
-    private fun getNotification(data:ArrayList<Call>):ArrayList<Call>{
-        val call = ArrayList<Call>()
-        for (i in data){
-            if(i.status == "Notification"){
-                call.add(i)
-            }
-        }
-        return call
-    }
 
 }

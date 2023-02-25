@@ -3,15 +3,11 @@ package com.example.hackmotion.fragment.home.transaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.dropbox.core.v2.common.PathRoot.root
 import com.example.hackmotion.R
 import com.example.hackmotion.dataSource.RecyclerViewClickListener
-import com.example.hackmotion.databinding.ItemCallBinding
-import com.example.hackmotion.databinding.ItemCallDoneBinding
 import com.example.hackmotion.fragment.model.Call
 import de.hdodenhof.circleimageview.CircleImageView
 

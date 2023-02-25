@@ -51,6 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/textView32" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -70,9 +71,11 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/liveStreamRv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/textView31" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -92,6 +95,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/available"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView33" />

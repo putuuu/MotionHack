@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hackmotion.R
 import com.example.hackmotion.dataSource.RecyclerViewClickListener
 import com.example.hackmotion.dataSource.Source
 import com.example.hackmotion.databinding.FragmentTransactionMenuBinding

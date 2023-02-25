@@ -19,13 +19,6 @@ class VideoCall : AppCompatActivity(){
     private lateinit var binding: ActivityVideoCallBinding
 
     private val args : TransactionMenuArgs by navArgs()
-    private var name =""
-    val tanggal =""
-    val judul =""
-    val desc =""
-    val harga =""
-    val category =""
-    val foto =""
 
     override fun onBackPressed() {
         val intent = Intent(this, Menu::class.java)

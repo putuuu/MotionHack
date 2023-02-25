@@ -1,24 +1,24 @@
 package com.example.hackmotion
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.navigation.navArgs
+import com.example.hackmotion.dataSource.Source
 import com.example.hackmotion.databinding.ActivityMenuBinding
+import com.example.hackmotion.fragment.home.bnvvm.BnvVM
 import com.example.hackmotion.fragment.home.dashboard.Dashboard
 import com.example.hackmotion.fragment.home.discovery.Discovery
 import com.example.hackmotion.fragment.home.notification.Notification
 import com.example.hackmotion.fragment.home.profile.Profile
-import com.example.hackmotion.fragment.home.bnvvm.BnvVM
-import com.example.hackmotion.fragment.home.profile.ProfileVM
-import com.example.hackmotion.fragment.home.transaction.Transaction
+import com.example.hackmotion.fragment.login.LoginArgs
 
 class Menu : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
     private val model: BnvVM by viewModels()
+    private val args : LoginArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,4 +104,9 @@ class Menu : AppCompatActivity() {
             }
         }
     }
+
+    fun getMyId(): String {
+        return  args.id
+    }
+
 }
