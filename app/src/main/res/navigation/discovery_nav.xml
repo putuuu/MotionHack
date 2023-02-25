@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discovery_nav"
+    app:startDestination="@id/discoveryMenu">
+
+    <fragment
+        android:id="@+id/discoveryMenu"
+        android:name="com.example.hackmotion.fragment.home.discovery.DiscoveryMenu"
+        android:label="fragment_discovery_menu"
+        tools:layout="@layout/fragment_discovery_menu" >
+        <action
+            android:id="@+id/action_discoveryMenu_to_discoveryDetail"
+            app:destination="@id/discoveryDetail" />
+        <argument android:name="name"
+            app:argType="string" />
+        <argument android:name="tanggal"
+            app:argType="string" />
+        <argument android:name="judul"
+            app:argType="string" />
+        <argument android:name="desc"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
+        <argument android:name="category"
+            app:argType="string" />
+        <argument android:name="foto"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoveryDetail"
+        android:name="com.example.hackmotion.fragment.home.discovery.DiscoveryDetail"
+        android:label="fragment_discovery_detail"
+        tools:layout="@layout/fragment_discovery_detail" >
+        <argument android:name="name"
+            app:argType="string" />
+        <argument android:name="tanggal"
+            app:argType="string" />
+        <argument android:name="judul"
+            app:argType="string" />
+        <argument android:name="desc"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
+        <argument android:name="category"
+            app:argType="string" />
+        <argument android:name="foto"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_discoveryDetail_to_discoveryMenu"
+            app:destination="@id/discoveryMenu" />
+    </fragment>
+
+</navigation>
