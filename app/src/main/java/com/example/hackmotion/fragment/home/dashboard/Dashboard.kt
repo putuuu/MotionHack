@@ -11,6 +11,7 @@ import com.example.hackmotion.dataSource.Source
 import com.example.hackmotion.databinding.FragmentDashboardBinding
 import com.example.hackmotion.fragment.home.transaction.RvCallAdapter
 import com.example.hackmotion.fragment.model.Call
+import com.example.hackmotion.fragment.model.Kategori
 import com.example.hackmotion.fragment.model.LiveStream
 
 class Dashboard : Fragment(), RecyclerViewClickListener {
@@ -27,6 +28,7 @@ class Dashboard : Fragment(), RecyclerViewClickListener {
 
         val dataAvailable = Source.getCall() as ArrayList<Call>
         val dataLive = Source.getStream() as ArrayList<LiveStream>
+        val dataCategory = Source.getKategori() as ArrayList<Kategori>
 
         val adapterAvailable = RvCallAdapter(dataAvailable)
         binding.available.layoutManager = LinearLayoutManager(context)
@@ -36,6 +38,10 @@ class Dashboard : Fragment(), RecyclerViewClickListener {
         val adapterLive = RvLsAdapter(dataLive)
         binding.liveStreamRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.liveStreamRv.adapter = adapterLive
+
+        val adapterCategory = RVCategoryAdapter(dataCategory)
+        binding.categoryR.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.categoryR.adapter = adapterCategory
 
         return view
     }

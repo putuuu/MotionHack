@@ -1,7 +1,10 @@
 package com.example.hackmotion.dataSource;
 
+import android.graphics.drawable.Drawable;
+
 import androidx.annotation.DrawableRes;
 
+import com.example.hackmotion.R;
 import com.example.hackmotion.fragment.model.Call;
 import com.example.hackmotion.fragment.model.Kategori;
 import com.example.hackmotion.fragment.model.LiveStream;
@@ -80,12 +83,16 @@ public class Source {
         return lstStream;
     }
 
-//    public static List<Kategori> getKategori(){
-//        List<Kategori> lstKategoti = new ArrayList<>();
-//
-//        lstKategoti.add(new Kategori(, "Group Call"));
-//
-//        return lstKategoti;
-//    }
+    public static List<Kategori> getKategori(){
+        List<Kategori> lstKategoti = new ArrayList<>();
+
+        lstKategoti.add(new Kategori(R.drawable.groupcall,"Group Call"));
+        lstKategoti.add(new Kategori(R.drawable.privatecall,"Private Call"));
+        lstKategoti.add(new Kategori(R.drawable.giftspeech,"Gift Speech"));
+        lstKategoti.add(new Kategori(R.drawable.personalchat,"Personal Chat"));
+        lstKategoti.add(new Kategori(R.drawable.livestream,"Live Stream"));
+
+        return lstKategoti;
+    }
 
 }
