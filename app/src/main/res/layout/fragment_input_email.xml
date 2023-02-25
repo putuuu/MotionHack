@@ -98,10 +98,10 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@mipmap/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />

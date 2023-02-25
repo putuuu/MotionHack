@@ -5,14 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.hackmotion.dataSource.RecyclerViewClickListener
 import com.example.hackmotion.dataSource.Source
 import com.example.hackmotion.databinding.FragmentDashboardBinding
+import com.example.hackmotion.fragment.home.profile.ProfileUserArgs
 import com.example.hackmotion.fragment.home.transaction.RvCallAdapter
+import com.example.hackmotion.fragment.login.LoginArgs
 import com.example.hackmotion.fragment.model.Call
 import com.example.hackmotion.fragment.model.Kategori
 import com.example.hackmotion.fragment.model.LiveStream
+import com.example.hackmotion.fragment.model.Users
 
 class Dashboard : Fragment(), RecyclerViewClickListener {
 
@@ -23,8 +28,14 @@ class Dashboard : Fragment(), RecyclerViewClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+
+        val user: Users = Source.getUser()[0]
+
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        binding.textView25.text = "Hi, "+user.name
+        Glide.with(this).load(user.profilePhoto).into(binding.profileImage)
 
         val dataAvailable = Source.getCall() as ArrayList<Call>
         val dataLive = Source.getStream() as ArrayList<LiveStream>

@@ -64,14 +64,13 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/quicksandmedium"
         android:text="Expired in 60 seconds"
         android:textColor="@color/white85"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
     <TextView
         android:id="@+id/textView20"
@@ -99,14 +98,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/otp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/buttonSubmitOtp"

@@ -12,10 +12,13 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.hackmotion.MainActivity
 import com.example.hackmotion.Menu
+import com.example.hackmotion.dataSource.Source
 import com.example.hackmotion.databinding.FragmentProfileUserBinding
 import com.example.hackmotion.fragment.home.transaction.TransactionMenuDirections
+import com.example.hackmotion.fragment.model.Users
 import com.example.hackmotion.retrofit.Api
 import com.example.hackmotion.retrofit.RetrofitClient
+import com.giphy.sdk.analytics.models.User
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -33,8 +36,13 @@ class ProfileUser : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
 
+        val user: Users = Source.getUser()[0]
+
         _binding = FragmentProfileUserBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        model.username.postValue(user.username)
+        model.profilePhoto.postValue(user.profilePhoto)
 
         model.username.observe(viewLifecycleOwner){name ->
             if (name.isNotEmpty()){
@@ -82,7 +90,6 @@ class ProfileUser : Fragment() {
 //            model.username.postValue(result.body()?.user?.username.toString())
 //            model.profilePhoto.postValue(result.body()?.user?.profilePhoto.toString())
 //        }
-
 
 
         return view

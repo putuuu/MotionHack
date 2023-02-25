@@ -33,21 +33,21 @@ class Login : Fragment() {
         }
 
         binding.buttonLogin.setOnClickListener{
-//            if (checkEmail(lstUser) == checkPass(lstUser) && (checkEmail(lstUser)!="-1")){
+            if (checkEmail(lstUser) == checkPass(lstUser) && (checkEmail(lstUser)!="-1")){
                 val direction = LoginDirections.actionLoginToMenu("1")
                 findNavController().navigate(direction)
-//            }else{
-//                binding.textInputLayout2.helperText = "* email/username atau password salah"
-//                binding.textInputLayout3.helperText = "* email/username atau password salah"
-//                if (binding.password.text.isNullOrEmpty()){
-//                    binding.textInputLayout2.helperText = "* password tidak boleh kosong"
-//                    binding.textInputLayout3.helperText = ""
-//                }
-//                if (binding.email.text.isNullOrEmpty()){
-//                    binding.textInputLayout2.helperText = ""
-//                    binding.textInputLayout3.helperText = "* email tidak boleh kosong"
-//                }
-//            }
+            }else{
+                binding.textInputLayout2.helperText = "* email/username atau password salah"
+                binding.textInputLayout3.helperText = "* email/username atau password salah"
+                if (binding.password.text.isNullOrEmpty()){
+                    binding.textInputLayout2.helperText = "* password tidak boleh kosong"
+                    binding.textInputLayout3.helperText = ""
+                }
+                if (binding.email.text.isNullOrEmpty()){
+                    binding.textInputLayout2.helperText = ""
+                    binding.textInputLayout3.helperText = "* email/username tidak boleh kosong"
+                }
+            }
         }
 
         binding.textViewForgetPass.setOnClickListener{

@@ -24,7 +24,7 @@
             android:textColor="@color/white100"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
         <TextView
             android:id="@+id/textView24"
@@ -49,16 +49,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/ic_launcher_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
         <ImageView
             android:id="@+id/buttonNewPass"
@@ -97,11 +87,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:background="@drawable/edit_stroke"
                 android:fontFamily="@font/quicksandmedium"
+                android:inputType="textPassword"
                 android:textColor="@color/white60"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -117,13 +107,33 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:background="@drawable/edit_stroke"
                 android:fontFamily="@font/quicksandmedium"
+                android:inputType="textPassword"
                 android:textColor="@color/white60"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

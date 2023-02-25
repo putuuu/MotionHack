@@ -31,14 +31,7 @@ class InputEmail : Fragment() {
         }
 
         binding.buttonInputEmail.setOnClickListener{
-            if (binding.email.text.isNullOrEmpty()){
-                binding.textInputLayout7.helperText = "* Email tidak boleh kosong"
-            }
-            else if(checkEmail(lstUser) == "-1"){
-                binding.textInputLayout7.helperText = "* Email belum terdaftar"
-            }else{
-                findNavController().navigate(R.id.action_inputEmail_to_otp)
-            }
+            findNavController().navigate(R.id.action_inputEmail_to_otp)
         }
 
         return view

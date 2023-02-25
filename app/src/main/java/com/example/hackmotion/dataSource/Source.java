@@ -49,10 +49,11 @@ public class Source {
     public static List<Users> getUser(){
         List<Users> lstUser = new ArrayList<>();
 
-        lstUser.add(new Users("1", "Eren", "+6234567890", "Attack",
-                "rumbling@gmail.com","Eren123",
+        lstUser.add(new Users("1", "Admin", "+6234567890", "Admin",
+                "example@gmail.com","Admin123",
                 "https://us-tuna-sounds-images.voicemod.net/1a1c77ef-bd48-42d6-a0c6-6d1b8ac8c916-1652883579309.jpg",
                 "true"));
+
 
         return lstUser;
     }
