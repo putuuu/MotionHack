@@ -9,5 +9,4 @@ public interface Api {
     @GET("/v1/users")
     suspend fun getUsers() : Response<Pengguna>
 
-
 }

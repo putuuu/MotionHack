@@ -21,4 +21,5 @@
         <item name="android:textSize">8sp</item>
         <item name="fontFamily">@font/quicksandregular</item>
     </style>
+
 </resources>

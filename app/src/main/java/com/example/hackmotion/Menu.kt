@@ -1,5 +1,6 @@
 package com.example.hackmotion
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import com.example.hackmotion.fragment.home.notification.Notification
 import com.example.hackmotion.fragment.home.profile.Profile
 import com.example.hackmotion.fragment.home.bnvvm.BnvVM
 import com.example.hackmotion.fragment.home.profile.ProfileVM
+import com.example.hackmotion.fragment.home.transaction.Transaction
 
 class Menu : AppCompatActivity() {
 
@@ -24,30 +26,15 @@ class Menu : AppCompatActivity() {
         val view = binding.root
 
         loadFragment(Dashboard())
+        selectedMenu()
 
-        model.selectedMenu.observe(this){menu->
-            when (menu){
-                R.id.profile ->{
-                    loadFragment(Profile())
-                    true
-                }
-                R.id.dashboard ->{
-                    loadFragment(Dashboard())
-                    true
-                }
-                R.id.discovery ->{
-                    loadFragment(Discovery())
-                    true
-                }
-                R.id.notification ->{
-                    loadFragment(Notification())
-                    true
-                }
-                else -> {
-                    loadFragment(com.example.hackmotion.fragment.home.transaction.Transaction())
-                    true
-                }
-            }
+        val intent = intent
+        var s1 = intent.getStringExtra("Back")
+
+        if (s1 == "1") {
+            s1 = ""
+            model.setSelectedMenu(R.id.transactionMenu)
+            selectedMenu()
         }
 
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -89,5 +76,32 @@ class Menu : AppCompatActivity() {
         val changefragment = supportFragmentManager.beginTransaction()
         changefragment.replace(R.id.menuFragment,fragment)
         changefragment.commit()
+    }
+
+    public fun selectedMenu(){
+        model.selectedMenu.observe(this){menu->
+            when (menu){
+                R.id.profile ->{
+                    loadFragment(Profile())
+                    true
+                }
+                R.id.dashboard ->{
+                    loadFragment(Dashboard())
+                    true
+                }
+                R.id.discovery ->{
+                    loadFragment(Discovery())
+                    true
+                }
+                R.id.notification ->{
+                    loadFragment(Notification())
+                    true
+                }
+                else -> {
+                    loadFragment(com.example.hackmotion.fragment.home.transaction.Transaction())
+                    true
+                }
+            }
+        }
     }
 }

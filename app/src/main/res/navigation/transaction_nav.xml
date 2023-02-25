@@ -12,10 +12,46 @@
         <action
             android:id="@+id/action_transactionMenu_to_videoCall"
             app:destination="@id/videoCall" />
+        <argument android:name="name"
+            app:argType="string" />
+        <argument android:name="tanggal"
+            app:argType="string" />
+        <argument android:name="judul"
+            app:argType="string" />
+        <argument android:name="desc"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
+        <argument android:name="category"
+            app:argType="string" />
+        <argument android:name="foto"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+
     </fragment>
     <activity
         android:id="@+id/videoCall"
         android:name="com.example.hackmotion.fragment.home.transaction.VideoCall"
         android:label="activity_video_call"
-        tools:layout="@layout/activity_video_call" />
+        tools:layout="@layout/activity_video_call" >
+        <argument android:name="name"
+            app:argType="string" />
+        <argument android:name="tanggal"
+            app:argType="string" />
+        <argument android:name="judul"
+            app:argType="string" />
+        <argument android:name="desc"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
+        <argument android:name="category"
+            app:argType="string" />
+        <argument android:name="foto"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+    </activity>
 </navigation>
