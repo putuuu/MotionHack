@@ -87,9 +87,21 @@
             android:text="Rp.50000"
             android:textColor="@color/orange50"
             android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+            app:layout_constraintBottom_toBottomOf="@+id/bookingbtn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+            app:layout_constraintTop_toTopOf="@+id/bookingbtn" />
+
+        <TextView
+            android:id="@+id/textviewHarga3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:fontFamily="@font/quicksandbold"
+            android:text="Rp.10000"
+            android:textColor="@color/orange50"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/checkBox2" />
 
         <TextView
             android:id="@+id/textviewTanggal2"
@@ -143,11 +155,11 @@
             app:layout_constraintTop_toBottomOf="@+id/textviewtitle" />
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/bookingbtn"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textviewHarga2"
@@ -161,10 +173,56 @@
             android:text="Booking"
             android:textColor="@color/white"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
-            app:layout_constraintEnd_toEndOf="@+id/imageView14"
-            app:layout_constraintStart_toStartOf="@+id/imageView14"
-            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+            app:layout_constraintBottom_toBottomOf="@+id/bookingbtn"
+            app:layout_constraintEnd_toEndOf="@+id/bookingbtn"
+            app:layout_constraintStart_toStartOf="@+id/bookingbtn"
+            app:layout_constraintTop_toTopOf="@+id/bookingbtn" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout10"
+            android:layout_width="323dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:buttonTint="@color/purple50"
+            android:fontFamily="@font/quicksandmedium"
+            android:text="Use Coin"
+            android:textColor="@color/white85"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/bookingbtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/voucher"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/voucherbutton"
+            app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10sp"
+            android:layout_marginStart="-32dp"
+            android:fontFamily="@font/quicksandmedium"
+            android:text="Masukkan Kode Voucher"
+            android:textColor="@color/red50"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/voucher" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

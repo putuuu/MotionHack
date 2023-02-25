@@ -56,6 +56,87 @@
         <action
             android:id="@+id/action_discoveryDetail_to_discoveryMenu"
             app:destination="@id/discoveryMenu" />
+        <action
+            android:id="@+id/action_discoveryDetail_to_discoveryVoucher"
+            app:destination="@id/discoveryVoucher" />
+        <action
+            android:id="@+id/action_discoveryDetail_to_paymentMethod"
+            app:destination="@id/paymentMethod" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoveryVoucher"
+        android:name="com.example.hackmotion.fragment.home.discovery.DiscoveryVoucher"
+        android:label="fragment_discovery_voucher"
+        tools:layout="@layout/fragment_discovery_voucher" >
+        <action
+            android:id="@+id/action_discoveryVoucher_to_discoveryDetail"
+            app:destination="@id/discoveryDetail" />
+        <argument android:name="name"
+            app:argType="string" />
+        <argument android:name="tanggal"
+            app:argType="string" />
+        <argument android:name="judul"
+            app:argType="string" />
+        <argument android:name="desc"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
+        <argument android:name="category"
+            app:argType="string" />
+        <argument android:name="foto"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethod"
+        android:name="com.example.hackmotion.fragment.home.discovery.PaymentMethod"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" >
+        <action
+            android:id="@+id/action_paymentMethod_to_discoveryDetail"
+            app:destination="@id/discoveryDetail" />
+        <action
+            android:id="@+id/action_discoveryVoucher_to_discoveryDetail"
+            app:destination="@id/discoveryDetail" />
+        <argument android:name="name"
+            app:argType="string" />
+        <argument android:name="tanggal"
+            app:argType="string" />
+        <argument android:name="judul"
+            app:argType="string" />
+        <argument android:name="desc"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
+        <argument android:name="category"
+            app:argType="string" />
+        <argument android:name="foto"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_paymentMethod_to_VA"
+            app:destination="@id/VA" />
+        <argument
+            android:name="metode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/VA"
+        android:name="com.example.hackmotion.fragment.home.discovery.VA"
+        android:label="fragment_v_a"
+        tools:layout="@layout/fragment_v_a" >
+        <action
+            android:id="@+id/action_VA_to_discoveryMenu"
+            app:destination="@id/discoveryMenu" />
+        <argument
+            android:name="metode"
+            app:argType="string" />
+        <argument android:name="harga"
+            app:argType="string" />
     </fragment>
 
 </navigation>

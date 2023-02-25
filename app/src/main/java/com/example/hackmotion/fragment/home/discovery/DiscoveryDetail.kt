@@ -39,9 +39,23 @@ class DiscoveryDetail : Fragment() {
             .load(args.foto)
             .into(binding.profileImage3);
 
+        binding.voucher.setOnClickListener {
+            val direction = DiscoveryDetailDirections.actionDiscoveryDetailToDiscoveryVoucher(args.name,
+                args.tanggal, args.judul, args.desc, args.harga, args.category, args.foto, args.status)
+            findNavController().navigate(direction)
+        }
 
         binding.linearLayoutBack.setOnClickListener{
-            findNavController().navigate(R.id.action_discoveryDetail_to_discoveryMenu)
+            val direction = DiscoveryDetailDirections.actionDiscoveryDetailToDiscoveryMenu(args.name,
+                args.tanggal, args.judul, args.desc, args.harga, args.category, args.foto, args.status)
+            findNavController().navigate(direction)
+        }
+
+        binding.bookingbtn.setOnClickListener {
+            val direction = DiscoveryDetailDirections.actionDiscoveryDetailToPaymentMethod(args.name,
+                args.tanggal, args.judul, args.desc, args.harga, args.category, args.foto, args.status,
+                "")
+            findNavController().navigate(direction)
         }
 
         return view

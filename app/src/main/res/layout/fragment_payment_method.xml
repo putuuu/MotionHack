@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.home.discovery.PaymentMethod">
+
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:fontFamily="@font/quicksandbold"
+        android:text="Choose your payment method"
+        android:textColor="@color/white100"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutBack" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/quicksandmedium"
+        android:text="You can choose your preffences"
+        android:textColor="@color/white100"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonpaypal"
+        app:layout_constraintStart_toStartOf="@+id/buttonpaypal"
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left_red" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/quicksandmedium"
+            android:text="Back"
+            android:textColor="@color/white100"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/buttonpaypal"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/edit_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-28dp"
+        android:fontFamily="@font/quicksandmedium"
+        android:text="Paypal"
+        android:textColor="@color/purple85"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonpaypal"
+        app:layout_constraintEnd_toEndOf="@+id/buttonpaypal"
+        app:layout_constraintStart_toStartOf="@+id/buttonpaypal"
+        app:layout_constraintTop_toTopOf="@+id/buttonpaypal" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/paypal"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonpaypal"
+        app:layout_constraintEnd_toStartOf="@+id/textView41"
+        app:layout_constraintTop_toTopOf="@+id/buttonpaypal" />
+
+    <ImageView
+        android:id="@+id/buttongoogle"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/edit_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonpaypal" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-28dp"
+        android:fontFamily="@font/quicksandmedium"
+        android:text="Google Play"
+        android:textColor="@color/purple85"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttongoogle"
+        app:layout_constraintEnd_toEndOf="@+id/buttongoogle"
+        app:layout_constraintStart_toStartOf="@+id/buttongoogle"
+        app:layout_constraintTop_toTopOf="@+id/buttongoogle" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/google_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintEnd_toStartOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+    <ImageView
+        android:id="@+id/buttonfacebook"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/edit_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttongoogle" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-28dp"
+        android:fontFamily="@font/quicksandmedium"
+        android:text="Facebook Play"
+        android:textColor="@color/purple85"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonfacebook"
+        app:layout_constraintEnd_toEndOf="@+id/buttonfacebook"
+        app:layout_constraintStart_toStartOf="@+id/buttonfacebook"
+        app:layout_constraintTop_toTopOf="@+id/buttonfacebook"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonfacebook"
+        app:layout_constraintEnd_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toTopOf="@+id/buttonfacebook" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
